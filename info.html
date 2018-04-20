@@ -1,24 +1,41 @@
-<head>
+
+ <head>
 
 
 <style>
+* {
+		box-sizing: border-box
+		margin: 0 auto;
+		padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body: {
+	font-size: 1.4rem;
+}
 		
-.container {margin: 1%;
-            width: 99%;
-			height: 99%;
+.container {margin: 0%;
+            width:100%;
+			height:100%;	 
 			background-color:#98db78;	
 			border-style:solid;
 			border-color:black;
 			border-width:100%;}
 		
-		
+.font    {font-family:"absender"}
 		
 .header {float:clear;
-         margin:2%;
+         margin-top:1%;
+		 margin-bottom:0%;
+		 margin-right:5%;
+		 margin-left:1%;
 		 padding:0%;
 		 background-color:#558f2c;
-		 width:95%;
-		 height:7%;
+		 width:40%;
+		 height:9%;
 		 font-style:#473712;
 		 border-style:solid;
 		 border-color:black;
@@ -26,92 +43,133 @@
 		 
 .content {float:right;
          padding:2%;
-		 margin:2%;
+		 margin-top:1%;
+		 margin-bottom:2%;
+		 margin-right:2%;
 		 background-color:#558f2c;
 		 width:70%;
-		 height:55%;
+		 height:65%;
 		 border-style:solid;
 		 border-color:black;
 		 border-width:30%;}
 
 .lbar	{float:left;   
          padding:2%;
-		 margin:2%;
+		 margin-top:1%;
+		 margin-bottom:2%;
+		 margin-right:0%;
+		 margin-left:1%;
 		 background-color:#558f2c;
-		 width:13%;
-		 height:55%;
+		 width:10%;
+		 height:40%;
 		 border-style:solid;
 		 border-color:black;
 		 border-width:30%;}
+
 		 
-.footer  {clear:both;   
+		 
+
+	
+
+		 
+		 
+
+.footer  {float:right;   
          padding:1%;
-		 margin:2%;
+		 margin-right:2%;
+		 margin-bottom:0%;
 		 background-color:#558f2c;
-		 width:94%;
+		 width:72%;
 		 height:3%;
 		 border-style:solid;
 		 border-color:black;
-		 border-width:5%;}
-	 
-		   
+		 border-width:5%;}   
 	
 		
-
-			
+	
 
 
 </style>
 </head>
 <body>
 
-<div class='container'> 
+	<div class='container'> 
 
-<div class='header'> <h1>Information </h1> </div>
-
-
-
-<div class='content'><font face="absender" color="black">
-<h4>Dave's petting zoo and farm is a family run establishment for familys it was started in the early 1900's 
-by our great,great,great-grandfather Divid Farmsworth. We have dedicated our lives to our farm animals and you!
-We take pride in our warm hospitality and our caring team.
-We also have a small creamery by glasgow that was established in 1957 we have 4 mitchelin stars
-and have (unofficaly) the best ice cream in scotland!</h4>
+	<div class='header'> <h1>Information </h1> </div>
 
 
 
-<img src="
-http://cdn.digital-photo-secrets.com/images/crops-leading-farmhouse.jpg"
-alt="farm" style="width:380px;height:330px;">
 
-&emsp;
-<img src="
-https://www.icecreamprofits.com/wp-content/upload/2012/05/iStock_000019502513Small.jpg"
-alt="farm" style="width:380px;height:330px;">
+		<div class='content'><font face="absender" color="black">																	
+				<h4>Dave's petting zoo and farm is a family run establishment for families it was started in the early 1900's 
+				by our great,great,great-grandfather David Farmsworth. We have dedicated our lives to our farm animals and you!
+				We take pride in our warm hospitality and our caring team.
+				We also have a small creamery by
+				<a href="https://en.wikipedia.org/wiki/Glasgow" target="_blank">Glasgow</a> that was established in 1957 we have 4
+				<a href="https://en.wikipedia.org/wiki/Michelin_Guide" target="_blank">mitchelin stars </a>
+				and have (unofficaly) the best ice cream in scotland!
+
+
+	<div> 
+		<button id="summerBtn">summer</button>
+		<button id="winterBtn">winter</button>
+	</div>
+	
+	<script>
+		var sBtn = document.getElementById("summerBtn");
+		var wBtn = document.getElementById("winterBtn");
+		var st = document.getElementById("summertimes");
+		var wt = document.getElementById("wintertimes");
+					
+		st.classList.add("hidden");
+		wt.classList.add("hidden");
+					
+		// on click of winterBtn do:
+		sBtn.addEventListener("click", function(event) {
+			st.classList.remove("hidden");
+			wt.classList.add("hidden");
+		})
+			
+		// on click of summerBtn do:
+		wBtn.addEventListener("click", function(event) {
+			wt.classList.remove("hidden"); 
+			st.classList.add("hidden");	
+		}) 
+	</script>	
+	
+	<img src="
+	http://cdn.digital-photo-secrets.com/images/crops-leading-farmhouse.jpg"
+	alt="farm" style="width:290px;height:260px;">
+
+	&emsp;
+	<img src="
+	https://www.icecreamprofits.com/wp-content/upload/2012/05/iStock_000019502513Small.jpg"
+	alt="farm" style="width:290px;height:260px;">
 </div>
 
 
 
 						
 						
-						
-						
 <div class='lbar'>
-<ol> <h2><a href="new.html">-home</h2>	</ol>
-<ol> <h2><a href="activities.html">-activties</h2>	</ol>
-<ol> <h2><a href="contact.html">-contact</h2>	</ol>
-<ol> <h2><a href="info.html">-info</h2>	</ol>
-<ol> <h2><a href="map.html">-map</h2>	</ol>
-<ol> <h2><a href="pics.html">-pictures</h2>	</ol></div>  
+<ol> <ol style="list-style-type:none">
+		<li><h1><a href="new.html">-home</h1></li>
+		<li><h1><a href="activities.html">-activties</h1></li>
+		<li><h1><a href="contact.html">-contact</h1></li>
+		<li><h1><a href="info.html">-info</h1></li>
+		<li><h1><a href="map.html">-map</h1>	</li>
+		<li><h1><a href="pics.html">-pictures</h1></li>
+	</ol>
+</div>  
 
 
 
 
 
 <div class='footer'> 	
-							<i>
-							All images and ideas are Copy-Write of dave's petting zoo and cafe
-							</i>
+					<i>
+					All images and ideas are Copy-Write of dave's petting zoo and cafe
+					</i>
 									 </div>
 
 
